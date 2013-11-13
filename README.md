@@ -34,12 +34,28 @@ after the first step. It needs to reserve stuff. Reserving stuff doesn't simply
 mean I say "I want to reserve Camera A from 10:00pm to 1:00am" that a
 reservation is made and everything is good. In the least we have to check to
 ensure the reservation we request does not interfere with another reservation.
-The reservation overlap can be broken down into 3 different types:
 
-- Reservation A's start time is __after__ Reservation B's start time, but
-  __before__ Reservation B's end time.
-- Reservation A's start time is __before__ Reservation B's start time, and
-  Reservation A's end time is __after__ Reservation A's start time.
-- Reservation A's start time is __after__ Reservation B's start time, and
-  Reservation A's end time is __before__ Reservation B's end time
+First let's evaluate when a reservation will not interfere with the reservation
+we are attempting to make. There are two scenarios:
 
+- Reservation A's start time is after Reservation B's end time
+- Reservation A's end time is before Reservation B's start time
+
+Since the only known reservation is the one we're making (Reservation A), we
+need the second case. To get all the overlaps we flip that non-conflict
+scenarios on their head:
+
+- Reservation A's start time is before Reservation B's end time
+- Reservation A's end time is after Reservation B's start time
+
+This does not assure an overlap though. Using the example reservation we had
+above, if I create a reservation from 2:00am to 3:00am, then Reservation A's
+start time is before Reservation B's end time, but there is no overlap.
+Therefore, the overlap scenario is an AND of the two, not an OR.
+
+A query would look like the following:
+
+```SQL
+SELECT * FROM reservations WHERE reservation.end > {10:00pm} AND
+reservation.start < {1:00am}
+```
