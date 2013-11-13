@@ -1,7 +1,7 @@
 reserve
 =======
 
-> Reserving things is difficult.
+> Reserving things is difficult. It shouldn't be.
 
 Every system out there appears to be specialized
 to reserve certain types of things, like hotel rooms, lab equipment, meeting
@@ -13,9 +13,9 @@ don't have that hotel like interface.
 
 Even though these expensive systems handle the extra requirements, many of them
 are clunky and an eyesore to look at. The cheaper ones can be just as much of an
-eyesore. Additionally, these systems require special hardware or OS
+eyesore and they lack features. Additionally, these systems require special hardware or OS
 requirements, many of them that I've found only run on windows. This adds costs,
- makes it harder for smaller organizations to get started, and adds other costs
+makes it harder for smaller organizations to get started, and adds other costs
 like licensing. It's time for some change. It's time to build something we can
 throw on any hardware and scale it up later when we need to. We need a platform
 that we can use to reserve things. Not to reserve hotel rooms or lab equipment,
@@ -23,7 +23,9 @@ just things.
 
 We should be able to plug this system into other systems that exist out there,
 like Wordpress, Drupal, Joomla, Symfony, and eventually Rails, Django, .NET and other non
-PHP systems.
+PHP systems. An eventual goal of this project would to make a pure C
+implementation of the reserve API, which enables its usage with any language
+that supports C bindings (similar to [libgit2](http://libgit2.github.com/)).
 
 We need a new way to reserve things, so let's build it.
 
@@ -59,3 +61,6 @@ A query would look like the following:
 SELECT * FROM reservations WHERE reservation.end > {10:00pm} AND
 reservation.start < {1:00am}
 ```
+This query would return all the results that result in a conflict. If no results
+are returned, there aren't any conflicts. Since the entire result set is being
+returned, one could even show an end user the times that are booked.
