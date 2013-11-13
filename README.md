@@ -26,3 +26,20 @@ like Wordpress, Drupal, Joomla, Symfony, and eventually Rails, Django, .NET and 
 PHP systems.
 
 We need a new way to reserve things, so let's build it.
+
+How do we do it?
+----------------
+Small steps. Pluggable storage, a RESTFUL API, and the other requirements come
+after the first step. It needs to reserve stuff. Reserving stuff doesn't simply
+mean I say "I want to reserve Camera A from 10:00pm to 1:00am" that a
+reservation is made and everything is good. In the least we have to check to
+ensure the reservation we request does not interfere with another reservation.
+The reservation overlap can be broken down into 3 different types:
+
+- Reservation A's start time is __after__ Reservation B's start time, but
+  __before__ Reservation B's end time.
+- Reservation A's start time is __before__ Reservation B's start time, and
+  Reservation A's end time is __after__ Reservation A's start time.
+- Reservation A's start time is __after__ Reservation B's start time, and
+  Reservation A's end time is __before__ Reservation B's end time
+
