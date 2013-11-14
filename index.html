@@ -61,8 +61,51 @@
         PHP systems. An eventual goal of this project would to make a pure C
         implementation of the reserve API, which enables its usage with any language
         that supports C bindings (similar to <a href="http://libgit2.github.com/" target="_blank" title="libgit2">libgit2</a>).
-
       </p>
+    <h2>How do we do it?</h2>
+    <p>
+Small steps. Pluggable storage, a RESTFUL API, and the other requirements come
+after the first step. It needs to reserve stuff. Reserving stuff doesn't simply
+mean I say "I want to reserve Camera A from 10:00pm to 1:00am" that a
+reservation is made and everything is good. In the least we have to check to
+ensure the reservation we request does not interfere with another reservation.
+</p>
+<p>First let's evaluate when a reservation will not interfere with the reservation
+  we are attempting to make. There are two scenarios:
+<ul>
+  <li>Reservation A's start time is after Reservation B's end time</li>
+  <li>Reservation A's end time is before Reservation B's start time</li>
+</ul>
+</p>
+
+<p>Since the only known reservation is the one we're making (Reservation A), we
+  need the second case. To get all the overlaps we flip that non-conflict
+  scenarios on their head:
+  <ul>
+    <li>Reservation A's start time is before Reservation B's end time</li>
+    <li>Reservation A's end time is after Reservation B's start time</li>
+  </ul>
+</p>
+
+<p>This does not assure an overlap though. Using the example reservation we had
+  above, if I create a reservation from 2:00am to 3:00am, then Reservation A's
+  start time is before Reservation B's end time, but there is no overlap.
+  Therefore, the overlap scenario is an AND of the two, not an OR.
+</p>
+<p>
+  A query would look like the following:
+
+<pre>
+SELECT * FROM reservations WHERE reservation.end > {10:00pm} AND
+reservation.start < {1:00am}
+</pre>
+</p>
+<p>
+  This query would return all the results that result in a conflict. If no results
+  are returned, there aren't any conflicts. Since the entire result set is being
+  returned, one could even show an end user the times that are booked.
+</p>
+
     </div>
 
     <!-- Le javascript
