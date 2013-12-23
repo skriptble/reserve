@@ -15,3 +15,7 @@ Examples:
   - I requested a suite in a hotel, but it's already booked for the week I've
     selected, so another suite is suggested. Amenity and overall price
     comparisons are displayed to give the user additional information.
+
+2. Related item engine that returns items that are often reserved in budles or at
+the same time, such as a camera, tripod, and lights or a camera and lab editing
+time.
