@@ -18,3 +18,5 @@ Examples:
 the same time, such as a camera, tripod, and lights or a camera and lab editing
 time.
 3. A hypermedia RESTful API should be exposed
+  - Should expose a properly constructed API that doesn't require much human readable
+documentation, if any.
