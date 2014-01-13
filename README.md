@@ -3,7 +3,7 @@ reserve
 
 > Reserving things is difficult. It shouldn't be.
 
-Every system out there appears to be specialized
+Reservation systems appear to be specialized
 to reserve certain types of things, like hotel rooms, lab equipment, meeting
 spaces, or resources. Many of these systems have awesome features, but they're
 specific to the system. Equipment reservation systems have lab hours, but
