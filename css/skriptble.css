@@ -2,8 +2,21 @@
 body {
   padding-top: 70px;
   padding-bottom: 20px;
+  background-color: #EBEBEB;
 }
 
 .byline {
   margin-bottom: 1em;
+}
+
+a.navbar-brand {
+    height: 60px;
+}
+
+.navbar-inverse {
+    background-color: #868686;
+}
+
+.jumbotron {
+    background-color: #DDDDDD;
 }
