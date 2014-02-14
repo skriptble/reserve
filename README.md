@@ -64,3 +64,10 @@ reservation.start < {1:00am}
 This query would return all the results that result in a conflict. If no results
 are returned, there aren't any conflicts. Since the entire result set is being
 returned, one could even show an end user the times that are booked.
+
+Reservation Object
+------------------
+For now I will assume the language implementing this reservation API will be
+object oriented, a language such as PHP or Go. The main reservation 'class'
+should be implemented using an interface. This interface should be have at the
+least a function that will return if a reservation conflicts with
