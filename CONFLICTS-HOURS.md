@@ -16,4 +16,5 @@ days to be classified as 'weekends'. There should also be a provision to check
 if a reservation extends overnight and if overnight reservations are allowed.
 
 In addition there might be two sets of hours or operations: One for the entity
-as a whole, i.e. the company, and one for the individual 
+as a whole, i.e. the company, and one for the individual reserveable items, such
+as a conference room or a camera.
