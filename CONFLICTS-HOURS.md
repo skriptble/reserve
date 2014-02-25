@@ -2,7 +2,7 @@ Hours of Operation & Conflicts
 ==============================
 In addition to ensuring that an item does not have a time conflict with another
 reservation, reservations will have hours to be bound by. The simplest
-system and default will assume that reservations can occur at any time on any
+system will assume that reservations can occur at any time on any
 date, essentially making the hours of operation for that item 24 hours per day
 7 days a week.
 
