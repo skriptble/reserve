@@ -11,7 +11,7 @@ sometimes you want to have studios that are more like hotel rooms than a camera.
 Systems that add that functionality cost substantially more than systems which
 don't have that hotel like interface.
 
-Even though these expensive systems handle the extra requirements, many of them
+Even though these expensive systems handle the requirements, many of them
 are clunky and an eyesore to look at. The cheaper ones can be just as much of an
 eyesore and they lack features. Additionally, these systems require special hardware or OS
 requirements, many of them that I've found only run on windows. This adds costs,
