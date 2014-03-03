@@ -8,7 +8,7 @@ date, essentially making the hours of operation for that item 24 hours per day
 
 Since the system should be implemented using an interface, to add hours of
 operation one would implement the interface with a more complex conflict
-checker and resolver.
+checker and conflict resolver.
 
 While hours of operation could be 7 days a week 9am to 5pm, the general usecase
 will most likely require not only hours, but also specific days, and for some
