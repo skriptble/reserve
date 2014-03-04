@@ -16,7 +16,7 @@ days to be classified as 'weekends'. There should also be a provision to check
 if a reservation extends overnight and if overnight reservations are allowed.
 
 There might be two sets of hours of operations: One for the entity
-as a whole, i.e. the company, and one for the individual reserveable items, such
+as a whole, the company, and one for the individual reserveable items, such
 as a conference room or a camera. The conflict resolution system should be able
 to handle this occurrence as well. Since ideally one is a special case of many,
 the system should be able to handle an arbitrary number of defined hours of
