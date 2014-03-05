@@ -15,3 +15,5 @@ Examples:
   - I requested a suite in a hotel, but it's already booked for the week I've
     selected, so another suite is suggested. Amenity and overall price
     comparisons are displayed to give the user additional information.
+2. Ability to spread the system out between multiple servers with ease but also
+   run the system on a single server.
