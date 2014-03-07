@@ -1,5 +1,5 @@
-Hours of Operation & Conflicts
-==============================
+Hours of Operation and Conflicts
+================================
 In addition to ensuring that an item does not have a time conflict with another
 reservation, reservations will have hours to be bound by. The simplest
 system will assume that reservations can occur at any time on any
