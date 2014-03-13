@@ -20,3 +20,6 @@ time.
 3. A hypermedia RESTful API should be exposed
   - Should expose a properly constructed API that doesn't require much human readable
 documentation, if any.
+4. The API should be able to take two times (a start time and end time) and a
+reservation time length and return available reservation in those times within two
+times.
