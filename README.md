@@ -25,7 +25,8 @@ We should be able to plug this system into other systems that exist out there,
 like Wordpress, Drupal, Joomla, Symfony, and eventually Rails, Django, .NET and other non
 PHP systems. An eventual goal of this project would to make a pure C
 implementation of the reserve API, which enables its usage with any language
-that supports C bindings (similar to [libgit2](http://libgit2.github.com/)).
+that supports C bindings (similar to [libgit2](http://libgit2.github.com/) or
+[linux containers](https://github.com/lxc/lxc).
 
 We need a new way to reserve things, so let's build it.
 
