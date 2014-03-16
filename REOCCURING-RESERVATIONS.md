@@ -1,6 +1,6 @@
 Reoccurring & Repeatable Reservations
 =====================================
-> Reservations should be repeatable.
+> Reservations should be easily repeatable.
 
 This should be plugged into the conflict workflow and repeating reservations
 should be stored in as compact a way as possible. They should have rules and
