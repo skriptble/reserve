@@ -2,7 +2,10 @@ reserve api Feature List
 ========================
 
 This document will serve as a place for features that can eventually be added to
-the reserve API.
+the reserve API. Each iteration should stick to a 3 features as to not overload
+a release with too much functionality. After each version this list should be
+revisited and assessed to determine if the features listed are actually features
+that belong in the core of the reserve api.
 
 1. Suggestion engine for showing possible reservation adjustments if the
 reservation requested has a conflict. This feature would only be useful in
