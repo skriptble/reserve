@@ -1,6 +1,9 @@
 reserve api Feature List
 ========================
 
+> Features should be specific and aim to narrow the scope of the problem
+> addressed.
+
 This document will serve as a place for features that can eventually be added to
 the reserve api.
 
