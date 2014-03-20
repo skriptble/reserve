@@ -1,7 +1,7 @@
 reserve
 =======
 
-> Reserving things should be simple.
+> Reserving things should be simple. Let's make it that way.
 
 The systems out there appear to be specialized to reserve certain types of things,
 like hotel rooms, lab equipment, meeting
